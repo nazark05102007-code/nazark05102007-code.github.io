@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #2f2a26;
+    background: linear-gradient(135deg, #fff4e6, #fde2e4, #dbeafe);
+    line-height: 1.7;
+}
+
+header {
+    background: #f6bd60;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 4px solid #e07a5f;
+}
+
+.header-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.top-text {
+    margin: 0 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9a3412;
+    font-size: 0.85rem;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: #7c2d12;
+}
+
+.lead {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+nav {
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+nav ul {
+    margin: 0;
+    padding: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav li {
+    background: #fff7ed;
+    border: 2px solid #fdba74;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-weight: bold;
+    color: #7c2d12;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px 50px;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.85);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 20px;
+    border-left: 8px solid #f4a261;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    margin-top: 0;
+    color: #9a3412;
+    font-size: 1.9rem;
+}
+
+h3 {
+    color: #b45309;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+ul, ol {
+    padding-left: 24px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.photo-card {
+    margin: 0;
+    background: #fffaf5;
+    border: 2px solid #fed7aa;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-card figcaption {
+    padding: 12px;
+    text-align: center;
+    background: #fff7ed;
+    color: #7c2d12;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #7c2d12;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-card img {
+        height: 220px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
