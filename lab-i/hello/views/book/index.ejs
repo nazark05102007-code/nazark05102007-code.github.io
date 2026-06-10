@@ -1,0 +1,16 @@
+<h1>Books list</h1>
+
+<a href="/book/create">Create new book</a>
+
+<ul>
+  <% books.forEach(function(book) { %>
+    <li>
+      <strong><%= book.title %></strong>
+      by <%= book.author %>
+
+      <a href="/book/<%= book.id %>">Show</a>
+      <a href="/book/<%= book.id %>/edit">Edit</a>
+      <a href="/book/<%= book.id %>/delete">Delete</a>
+    </li>
+  <% }) %>
+</ul>
