@@ -41,9 +41,8 @@ router.post('/:id/edit', function (req, res) {
     res.redirect('/book')
 })
 
-router.get('/:id/delete', function (req, res) {
-    db.prepare('DELETE FROM book WHERE id = ?')
-        .run(req.params.id)
+router.post('/:id/delete', function (req, res) {
+    db.prepare('DELETE FROM book WHERE id = ?').run(req.params.id)
 
     res.redirect('/book')
 })

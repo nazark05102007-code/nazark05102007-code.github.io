@@ -1,16 +1,55 @@
-<h1>Books list</h1>
+<link rel="stylesheet" href="/stylesheets/style.css">
+<div class="page">
+  <header class="top">
+    <h1>Lab I - Books CRUD</h1>
+    <p>Nazar Kopachynskyi 57708</p>
+  </header>
 
-<a href="/book/create">Create new book</a>
+  <main class="content">
+    <div class="card">
+      <div class="card-header">
+        <h2>Books list</h2>
+        <a class="btn btn-primary" href="/book/create">Create new book</a>
+      </div>
 
-<ul>
-  <% books.forEach(function(book) { %>
-    <li>
-      <strong><%= book.title %></strong>
-      by <%= book.author %>
+      <% if (books.length === 0) { %>
+        <p>No books found.</p>
+      <% } else { %>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Description</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
 
-      <a href="/book/<%= book.id %>">Show</a>
-      <a href="/book/<%= book.id %>/edit">Edit</a>
-      <a href="/book/<%= book.id %>/delete">Delete</a>
-    </li>
-  <% }) %>
-</ul>
+          <tbody>
+            <% books.forEach(function(book) { %>
+              <tr>
+                <td><%= book.id %></td>
+                <td><%= book.title %></td>
+                <td><%= book.author %></td>
+                <td><%= book.description %></td>
+                <td class="actions">
+                  <a class="btn btn-small" href="/book/<%= book.id %>">Show</a>
+                  <a class="btn btn-small btn-warning" href="/book/<%= book.id %>/edit">Edit</a>
+
+                  <form method="post" action="/book/<%= book.id %>/delete" class="inline-form">
+                    <button class="btn btn-small btn-danger" type="submit">Delete</button>
+                  </form>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      <% } %>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>PTW LAB I</p>
+  </footer>
+</div>

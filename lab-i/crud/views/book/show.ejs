@@ -1,7 +1,43 @@
-<h1><%= book.title %></h1>
+<link rel="stylesheet" href="/stylesheets/style.css">
+<div class="page">
+  <header class="top">
+    <h1>Lab I - Books CRUD</h1>
+    <p>Nazar Kopachynskyi 57708</p>
+  </header>
+  <main class="content">
+    <div class="card">
+      <h2>Book details</h2>
+      <table class="table details-table">
+        <tbody>
+          <tr>
+            <th>Id</th>
+            <td><%= book.id %></td>
+          </tr>
+          <tr>
+            <th>Title</th>
+            <td><%= book.title %></td>
+          </tr>
+          <tr>
+            <th>Author</th>
+            <td><%= book.author %></td>
+          </tr>
+          <tr>
+            <th>Description</th>
+            <td><%= book.description %></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="buttons">
+        <a class="btn" href="/book">Back to list</a>
+        <a class="btn btn-warning" href="/book/<%= book.id %>/edit">Edit</a>
 
-<p><strong>Author:</strong> <%= book.author %></p>
-
-<p><strong>Description:</strong> <%= book.description %></p>
-
-<a href="/book">Back to list</a>
+        <form method="post" action="/book/<%= book.id %>/delete" class="inline-form">
+          <button class="btn btn-danger" type="submit">Delete</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>PTW LAB I</p>
+  </footer>
+</div>

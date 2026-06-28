@@ -1,8 +1,182 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+  color: #222;
 }
 
-a {
-  color: #00B7FF;
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  background: #1f2937;
+  color: white;
+  padding: 20px 40px;
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.top p {
+  margin: 5px 0 0;
+  color: #d1d5db;
+}
+
+.content {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+  flex: 1;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.table th {
+  background: #f3f4f6;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border: 1px solid #d1d5db;
+}
+
+.details-table th {
+  width: 160px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 13px;
+  border-radius: 6px;
+  background: #6b7280;
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: #2563eb;
+}
+
+.btn-warning {
+  background: #d97706;
+}
+
+.btn-danger {
+  background: #dc2626;
+}
+
+.btn-small {
+  padding: 5px 9px;
+  font-size: 13px;
+}
+
+.inline-form {
+  display: inline;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form label {
+  font-weight: bold;
+}
+
+.form input,
+.form textarea {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.form textarea {
+  min-height: 120px;
+}
+
+.buttons {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer {
+  background: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 14px;
+}
+
+@media (max-width: 700px) {
+  .top {
+    padding: 16px;
+  }
+
+  .content {
+    width: 95%;
+    margin: 15px auto;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card-header {
+    display: block;
+  }
+
+  .table {
+    font-size: 13px;
+  }
+
+  .table th,
+  .table td {
+    padding: 7px;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
 }
